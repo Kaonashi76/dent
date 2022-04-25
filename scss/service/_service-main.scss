@@ -44,5 +44,12 @@
       margin-bottom: 30px;
     }
   }
+}
 
+@media (max-width: 860px) {
+  .service {
+    &__header {
+        margin-top: 100px;
+    }
+  }
 }
