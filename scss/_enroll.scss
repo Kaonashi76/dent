@@ -1,0 +1,154 @@
+.enroll {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  background-color: #3278ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .section-header {
+    color: white;
+  }
+
+  &__description {
+    color: white;
+    display: inline-block;
+    max-width: 550px;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+
+    &-item {
+      margin-bottom: 25px;
+      width: 100%;
+      padding: 20px 20px 20px 20px;
+      border: none;
+      width: 880px;
+
+      &:focus {
+        outline-color: #ff2727;
+      }
+      &::placeholder {
+        color: #B3B3B3
+      }
+    }
+
+    &__select {
+      cursor: pointer;
+      position: relative;
+      appearance: none;
+      margin: 0;
+
+      &-wrapp {
+        width: 100%;
+        position: relative;
+        margin-bottom: 20px;
+
+        &::after {
+          content: ' ';
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 6px 5px 0 5px;
+          border-color: #000 transparent transparent transparent;
+          position: absolute;
+          right: 20px;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          pointer-events: none;
+          border-top-color: #ff2727;
+        }
+      }
+    }
+
+    &__textarea {
+      resize: none;
+    }
+
+    &__submit {
+      color: #ffffff;
+      background-color: #ff2727;
+      width: 200px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      border-radius: 7px;
+      font-weight: 700;
+      cursor: pointer;
+      margin: 20px 0;
+    }
+
+    &__police {
+      font-size: 18px;
+      font-weight: 300;
+      color: rgb(255, 255, 255);
+      line-height: 1.55;
+      display: inline-block;
+      width: 600px;
+      text-align: center;
+    }
+  }
+
+}
+
+@media (max-width: 930px) {
+  .enroll {
+    &__description {
+      font-size: 20px;
+    }
+    &__form {
+      padding: 0 30px;
+
+      &-item {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 670px) {
+  .enroll {
+    &__form {
+      max-width: 100%;
+      &__police {
+        display: inline;
+        padding: 0 20px;
+        text-align: center;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 530px) {
+  .enroll {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    &__description {
+      font-size: 18px;
+      text-align: center;
+      padding: 0 20px;
+    }
+    &__form {
+      &__police {
+        font-size: 16px;
+      }
+      &__submit {
+        width: 100%;
+      }
+    }
+  }
+}

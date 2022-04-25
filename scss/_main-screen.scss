@@ -1,0 +1,136 @@
+.main-screen {
+  height: 100vh;
+
+  background-image: url('../img/main-screen-bg.jpg');
+  background-position: center center;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  background-position-x: 100%;
+  background-position-y: 100%;
+  background-size: 1000px;
+  display: flex;
+  align-items: center;
+
+  .action {
+    width: 100%;
+
+    &__header {
+      display: block;
+      max-width: 475px;
+      font-size: 50px;
+      line-height: 1.55;
+      font-weight: 700;
+    }
+
+    &__btn {
+      width: 200px;
+      height: 55px;
+      border: none;
+      color: #ffffff;
+      font-size: 24px;
+      font-weight: 600;
+      border-radius: 30px;
+      background-color: #ff2727;
+      transition: background-color 0.2s ease-in-out;
+
+      &:hover {
+        cursor: pointer;
+        background-color: #e73b3b;
+      }
+
+      &:active {
+        background-color: #d80c0c;
+      }
+    }
+  }
+}
+
+@media (max-width: 1650px) {
+  .main-screen {
+    background-size: 800px;
+  }
+}
+
+
+@media (max-width: 1300px) {
+  .main-screen {
+    background-size: 700px;
+    .action {
+      margin-left: 20px;
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .main-screen {
+    background-size: 600px;
+
+    .action {
+      margin-left: 40px;
+    }
+
+    .action__header {
+      font-size: 40px;
+    }
+
+    .action__btn {
+      font-size: 18px;
+    }
+  }
+}
+
+@media (max-width: 940px) {
+  .main-screen {
+    background-size: 550px;
+    background-position-x: 110%;
+  }
+}
+
+
+@media (max-width: 850px) {
+  .main-screen {
+    .action__header {
+      max-width: 325px;
+      font-size: 35px;
+    }
+  }
+}
+
+@media (max-width: 810px) {
+  .main-screen {
+    background: none;
+    justify-content: center;
+    .action {
+     margin: 0 20px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     
+     &__header {
+      max-width: 475px;
+      font-size: 50px;
+      text-align: center;
+      display: inline;
+     }
+    }
+  }
+}
+  @media (max-width: 500px) {
+    .main-screen {
+      .action {
+       &__header {
+        max-width: 475px;
+        font-size: 30px;
+        text-align: center;
+        display: inline;
+       }
+       &__btn {
+        width: 170px;
+        font-size: 16px;
+       }
+      }
+    }
+}

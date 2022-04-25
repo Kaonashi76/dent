@@ -1,0 +1,122 @@
+.service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__header {
+    margin: 60px 0;
+  }
+
+  &__description {
+    font-size: 24px;
+    font-weight: 300;
+    display: inline-block;
+    line-height: 1.45;
+    max-width: 760px;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  &__details-container {
+    max-width: 760px;
+    width: 100%;
+  }
+
+  &__details {
+    transition: all 1s;
+    border-top: 1px solid #eee;
+    position: relative;
+
+    &:last-child {
+    border-bottom: 1px solid #eee;
+   }
+
+  }
+
+  &__summary {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.35;
+    padding: 27px 50px 27px 0;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__list {
+    list-style: '—';
+    font-size: 20px;
+    font-weight: 300;
+  }
+
+  &__item {
+    padding-left: 10px;
+  }
+
+// marker styling
+  details summary::-webkit-details-marker {
+    display: none
+  }
+
+  details > summary {
+    list-style: none;
+  }
+
+  details summary:after {
+    content: "+";
+    color: black;
+    position: absolute;
+    font-size: 40px;
+    line-height: 1;
+    right: 0;
+    font-weight: 200;
+    transform-origin: center;
+    transition: 200ms linear;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+  }
+
+  details:hover summary:after {
+    background-color: #eee;
+  }
+
+  details[open] summary:after {
+    transform: rotate(45deg);
+  }
+
+}
+
+@media (max-width: 810px) {
+  .service {
+    &__details-container {
+      padding: 0 20px;
+    }
+    & details summary:after {
+      top: 20px;
+    }
+  }
+}
+
+@media (max-width: 630px) {
+  .service {
+    &__header {
+      margin: 40px 0;
+    }
+
+    &__description {
+      font-size: 20px;
+    }
+
+    &__summary {
+      font-size: 20px;
+    }
+
+    &__list {
+      font-size: 18px;
+    }
+  }
+}
+
