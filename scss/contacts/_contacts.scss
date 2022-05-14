@@ -116,13 +116,24 @@
 
       font-weight: 700;
       width: 210px;
-      cursor: pointer;
       margin: 0;
-
+      display: flex;
+      align-items: center;
+      justify-content: center;
       outline-color: #ff2727;
       color: #ffffff;
       background-color: #3278ff;
       border-radius: 30px;
+      transition: background-color .1s;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:disabled:hover, &:disabled {
+        background-color: #123a88;
+        cursor: not-allowed;
+      }
 
       &:hover {
         transition: all .5s ease;

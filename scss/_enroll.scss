@@ -86,8 +86,18 @@
       border: none;
       border-radius: 7px;
       font-weight: 700;
-      cursor: pointer;
+
       margin: 20px 0;
+      transition: background-color .1s;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:disabled {
+        background-color: #b91d1d;
+        cursor: not-allowed;
+      }
     }
 
     &__police {
@@ -151,4 +161,9 @@
       }
     }
   }
+}
+
+.enroll-spinner {
+  width: 55px;
+  display: none;
 }

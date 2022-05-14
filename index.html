@@ -4,11 +4,40 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="yandex-verification" content="640d23ad5f462f8f" />
   <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="./css/index.min.css"">
+  <link rel="stylesheet" href="./css/notification.min.css">
   <title>Стоматологическая клиника</title>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(88773601, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+       });
+    </script>
+    <!-- /Yandex.Metrika counter -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-62QHPC65ZR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-62QHPC65ZR');
+    </script>
+
 </head>
+
 <body>
+  <noscript><div><img src="https://mc.yandex.ru/watch/88773601" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
   <header class="header">
     <div class="container">
       <div class="logo">
@@ -214,49 +243,63 @@
         </div>
       </div>
       <a href="./specialist.html" class="specialist__more-btn">Показать больше</a>
+      <a name="form"></a>
     </section>
     <a name="enroll"></a>
     <section class="enroll">
       <h2 class="section-header">Записаться на прием</h2>
       <p class="enroll__description">Выберите вид услуги, добавьте свои пожелания, и наш менеджер свяжется с вами для уточнения деталей</p>
 
-      <form class="container enroll__form">
+      <form class="container enroll__form" id="enroll_form">
         <input
           class="enroll__form-item"
           placeholder="Ваше полное имя"
           type="text"
-          name=""
-          id=""
+          name="name"
+          id="name"
+          required
         >
         <input
           class="enroll__form-item"
           type="tel"
-          name=""
-          id=""
-          value="+7 (__) ___-__-__"
-          pattern="^\+7(\s+)?\(?(17|25|29|33|44)\)?(\s+)?[0-9]{3}-?[0-9]{2}-?[0-9]{2}$"
+          name="tel"
+          id="tel"
           placeholder="Телефон"
+          required
+          minlength="17"
+          maxlength="17"
         >
         <input
           class="enroll__form-item"
           placeholder="Ваш E-mail"
           type="email"
-          name=""
-          id=""
+          name="email"
+          id="email"
+          required
         >
         <div class="enroll__form__select-wrapp">
-           <select class="enroll__form-item enroll__form__select" name="" id="">
-            <option value="">Консультация</option>
-            <option value="">Приём терапевта</option>
-            <option value="">Удаление зубов</option>
-            <option value="">Реставрация зубов</option>
-            <option value="">Имплантация зубов</option>
-            <option value="">Другое</option>
+           <select class="enroll__form-item enroll__form__select" name="service" id="service">
+              <option value="Консультация">Консультация</option>
+              <option value="Приём терапевта">Приём терапевта</option>
+              <option value="Удаление зубов">Удаление зубов</option>
+              <option value="Реставрация зубов">Реставрация зубов</option>
+              <option value="Имплантация зубов">Имплантация зубов</option>
+              <option value="Другое">Другое</option>
         </select>
         </div>
 
-        <textarea placeholder="Комментарии" class="enroll__form-item enroll__form__textarea" name="" id="" cols="30" rows="5"></textarea>
-        <button class="enroll__form__submit" type="submit">Отправить</button>
+        <textarea
+          placeholder="Комментарии"
+          class="enroll__form-item enroll__form__textarea"
+          name="comment"
+          id="comment"
+          cols="30"
+          rows="5"
+        ></textarea>
+        <button id="submit_btn" class="enroll__form__submit" type="submit">
+          <span class="submit_btn__text">Отправить</span>
+          <img class="enroll-spinner" src="./img/spinner.svg">
+        </button>
         <p class="enroll__form__police">Вы даете согласие на обработку персональных данных и соглашаетесь
           c политикой конфиденциальности</p>
       </form>
@@ -291,7 +334,7 @@
       </p>
       <p class="map__mail">
         Почта:
-        <a class="map__link" href="mailto:hello@dentalckinic.com">hello@dentalckinic.com</a>
+        <a class="map__link" href="mailto:dentlove.sev@yandex.ru">dentlove.sev@yandex.ru</a>
       </p>
     </section>
     <div id="map"></div>
@@ -324,28 +367,16 @@
     </div>
     <div class="footer__contacts-wrapp">
       <a class="footer__contacts-item" href="tel:+79780330215">+7 (978) 033-02-15</a>
-      <a class="footer__contacts-item" href="mailto:dentistry@gmail.com">dentistry@gmail.com</a>
+      <a class="footer__contacts-item" href="mailto:dentlove.sev@yandex.ru">dentlove.sev@yandex.ru</a>
       <address class="footer__contacts-item">г. Севастополь, ул. Борисова, 1/3</address>
       <p class="footer__contacts-item">пн-пт 9:00 - 17:00; сб 9:00 - 16:00</p>
     </div>
   </footer>
 
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=d7c8ce9f-a564-4fa6-8f87-3961be836d9d " type="text/javascript"></script>
-  <script type="text/javascript">
-    var myMap;
-
-// Дождёмся загрузки API и готовности DOM.
-    ymaps.ready(init);
-
-    function init () {
-        myMap = new ymaps.Map('map', {
-            center: [44.589979, 33.505116],
-            zoom: 10
-        }, {
-            searchControlProvider: 'yandex#search'
-        });
-      }
-  </script>
+  <script src="./js/notification.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/form.js"></script>
 </body>
 </html>
 
